@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="babasport-service-cob:war">
+    <output-path>$PROJECT_DIR$/babasport-service-cob/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>babasport-service-cob</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="babasport-service-cob-0.0.1-SNAPSHOT.war">
+      <element id="artifact" artifact-name="babasport-service-cob:war exploded" />
+    </root>
+  </artifact>
+</component>
