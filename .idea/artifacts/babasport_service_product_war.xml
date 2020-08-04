@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="war" name="babasport-service-product:war">
-    <output-path>$PROJECT_DIR$/babasport-service-product/target</output-path>
+    <output-path>$PROJECT_DIR$/../../tools/apache-tomcat-7.0.93/webapps</output-path>
     <properties id="maven-jee-properties">
       <options>
         <module>babasport-service-product</module>

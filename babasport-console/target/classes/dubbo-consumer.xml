@@ -1,7 +1,8 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
 	xmlns:context="http://www.springframework.org/schema/context"
-	xmlns:aop="http://www.springframework.org/schema/aop" 
+	xmlns:aop="http://www.springframework.org/schema/aop"
 	xmlns:tx="http://www.springframework.org/schema/tx"
 	xmlns:task="http://www.springframework.org/schema/task"
 	xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
@@ -19,25 +20,19 @@
    		http://www.springframework.org/schema/task/spring-task-4.0.xsd
 		http://code.alibabatech.com/schema/dubbo        
 		http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
-		
-	<!-- Dubbo消费方 -->
-	<!-- 1：名称  计算机 区别 唯一 -->
-	<dubbo:application name="babasport-console"/>
-	<!-- 2：设置注册中心  地址  zookeeper在哪里  redis ... -->
-<!-- 	<dubbo:registry address="192.168.200.128:2181,192.168.200.129:2181,192.168.200.130:2181" protocol="zookeeper"/> -->
-<!-- 	<dubbo:registry address="192.168.200.128:2181" protocol="zookeeper"/> -->
-	<dubbo:registry address="N/A" check="false"/>
-	<!-- 4： 调用此接口对应的实现类  单位毫秒-->
-	<dubbo:reference interface="cn.itcast.core.service.TestTbService" id="testTbService"
-		url="dubbo://127.0.0.1:20880" 
-	/>
-	<dubbo:reference interface="cn.itcast.core.service.product.BrandService" id="brandService"
-		url="dubbo://127.0.0.1:20880" 
-	/>
-	<dubbo:reference interface="cn.itcast.core.service.product.UploadService" id="uploadService"
-		url="dubbo://127.0.0.1:20880" 
-	/>
-	<!-- 全局设置 -->
-	<dubbo:consumer timeout="600000" check="false"/>
-		
+
+	<!-- dobbo消费方 -->
+	<!-- 1. 名称 计算机名称唯一 -->
+	<dubbo:application name="babasport-console" />
+	<!-- 2. 设置注册中心 地址 zookeeper在哪里 -->
+	<!-- <dubbo:registry address="192.168.200.128:2181,192.168.200.128:2181" protocol="zookeeper"></dubbo:registry> -->
+	<dubbo:registry address="192.168.200.128:2181" protocol="zookeeper"></dubbo:registry>
+	<!-- check="false" 不检查，dubbo不会提示某个服务异常或未连接 -->
+	<!-- <dubbo:registry address="N/A" check="false"></dubbo:registry> -->
+	<!-- 4.调用此接口对应的实现类 -->  
+	<dubbo:reference interface="cn.itcast.core.service.TestTbService" id="testTbService"></dubbo:reference>
+	<dubbo:reference interface="cn.itcast.core.service.product.BrandService" id="brandService"></dubbo:reference>
+	<dubbo:reference interface="cn.itcast.core.service.upload.UploadService" id="uploadService"></dubbo:reference>
+	<!-- 全局设置 设置dubbo连接超时时间：10分钟（默认一秒钟） -->
+	<dubbo:consumer timeout="600000" check="false"></dubbo:consumer>
 </beans>

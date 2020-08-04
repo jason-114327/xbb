@@ -1,17 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="babasport-console:war" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="5b005ee2-ceb1-4010-afd3-4343c5f440ae" name="Default Changelist" comment="" />
+    <list default="true" id="5b005ee2-ceb1-4010-afd3-4343c5f440ae" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/babasport-console/src/main/resources/log4j.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/babasport-service-product/src/main/resources/log4j.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/babasport-common/target/classes/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/babasport-common/target/classes/META-INF/maven/cn.itcast.babasport/babasport-common/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/babasport-common/target/classes/META-INF/maven/cn.itcast.babasport/babasport-common/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/babasport-common/target/classes/cn/itcast/common/fdfs/FastDFSUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/babasport-common/target/classes/cn/itcast/common/fdfs/FastDFSUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/babasport-common/target/classes/cn/itcast/common/web/Constants.class" beforeDir="false" afterPath="$PROJECT_DIR$/babasport-common/target/classes/cn/itcast/common/web/Constants.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/babasport-console/src/main/java/cn/itcast/core/controller/BrandController.java" beforeDir="false" afterPath="$PROJECT_DIR$/babasport-console/src/main/java/cn/itcast/core/controller/BrandController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/babasport-console/src/main/java/cn/itcast/core/controller/CenterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/babasport-console/src/main/java/cn/itcast/core/controller/CenterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/babasport-console/src/main/java/cn/itcast/core/controller/UploadController.java" beforeDir="false" afterPath="$PROJECT_DIR$/babasport-console/src/main/java/cn/itcast/core/controller/UploadController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/babasport-console/src/main/resources/dubbo-consumer.xml" beforeDir="false" afterPath="$PROJECT_DIR$/babasport-console/src/main/resources/dubbo-consumer.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/babasport-console/src/main/resources/springmvc-console.xml" beforeDir="false" afterPath="$PROJECT_DIR$/babasport-console/src/main/resources/springmvc-console.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/babasport-console/target/classes/cn/itcast/core/controller/BrandController.class" beforeDir="false" afterPath="$PROJECT_DIR$/babasport-console/target/classes/cn/itcast/core/controller/BrandController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/babasport-console/target/classes/cn/itcast/core/controller/CenterController.class" beforeDir="false" afterPath="$PROJECT_DIR$/babasport-console/target/classes/cn/itcast/core/controller/CenterController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/babasport-console/target/classes/cn/itcast/core/controller/UploadController.class" beforeDir="false" afterPath="$PROJECT_DIR$/babasport-console/target/classes/cn/itcast/core/controller/UploadController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/babasport-dao/target/classes/cn/itcast/core/dao/TestTbDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/babasport-dao/target/classes/cn/itcast/core/dao/TestTbDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/babasport-dao/target/classes/cn/itcast/core/dao/product/BrandDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/babasport-dao/target/classes/cn/itcast/core/dao/product/BrandDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/babasport-interface/src/main/java/cn/itcast/core/service/product/BrandService.java" beforeDir="false" afterPath="$PROJECT_DIR$/babasport-interface/src/main/java/cn/itcast/core/service/product/BrandService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/babasport-interface/src/main/java/cn/itcast/core/service/product/UploadService.java" beforeDir="false" afterPath="$PROJECT_DIR$/babasport-interface/src/main/java/cn/itcast/core/service/upload/UploadService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/babasport-interface/target/classes/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/babasport-interface/target/classes/META-INF/maven/cn.itcast.babasport/babasport-interface/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/babasport-interface/target/classes/META-INF/maven/cn.itcast.babasport/babasport-interface/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/babasport-interface/target/classes/cn/itcast/core/service/TestTbService.class" beforeDir="false" afterPath="$PROJECT_DIR$/babasport-interface/target/classes/cn/itcast/core/service/TestTbService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/babasport-interface/target/classes/cn/itcast/core/service/product/BrandService.class" beforeDir="false" afterPath="$PROJECT_DIR$/babasport-interface/target/classes/cn/itcast/core/service/product/BrandService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/babasport-interface/target/classes/cn/itcast/core/service/product/UploadService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/babasport-pojo/target/classes/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/babasport-pojo/target/classes/META-INF/maven/cn.itcast.babasport/babasport-pojo/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/babasport-pojo/target/classes/META-INF/maven/cn.itcast.babasport/babasport-pojo/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/babasport-pojo/target/classes/cn/itcast/core/bean/TestTb.class" beforeDir="false" afterPath="$PROJECT_DIR$/babasport-pojo/target/classes/cn/itcast/core/bean/TestTb.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/babasport-pojo/target/classes/cn/itcast/core/bean/product/Brand.class" beforeDir="false" afterPath="$PROJECT_DIR$/babasport-pojo/target/classes/cn/itcast/core/bean/product/Brand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/babasport-pojo/target/classes/cn/itcast/core/bean/product/BrandQuery.class" beforeDir="false" afterPath="$PROJECT_DIR$/babasport-pojo/target/classes/cn/itcast/core/bean/product/BrandQuery.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/babasport-service-product/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/babasport-service-product/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/babasport-service-product/src/main/java/cn/itcast/core/service/TestTbServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/babasport-service-product/src/main/java/cn/itcast/core/service/TestTbServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/babasport-service-product/src/main/java/cn/itcast/core/service/product/UploadServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/babasport-service-product/src/main/java/cn/itcast/core/service/upload/UploadServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/babasport-service-product/src/main/resources/application-context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/babasport-service-product/src/main/resources/application-context.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/babasport-service-product/src/main/resources/config/anonation.xml" beforeDir="false" afterPath="$PROJECT_DIR$/babasport-service-product/src/main/resources/config/anonation.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/babasport-service-product/src/main/resources/config/dubbo-provider.xml" beforeDir="false" afterPath="$PROJECT_DIR$/babasport-service-product/src/main/resources/config/dubbo-provider.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/babasport-service-product/src/main/resources/config/jdbc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/babasport-service-product/src/main/resources/config/jdbc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/babasport-service-product/src/main/resources/config/mybatis.xml" beforeDir="false" afterPath="$PROJECT_DIR$/babasport-service-product/src/main/resources/config/mybatis.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/babasport-service-product/src/main/resources/config/property.xml" beforeDir="false" afterPath="$PROJECT_DIR$/babasport-service-product/src/main/resources/config/property.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/babasport-service-product/src/main/resources/fdfs_client.conf" beforeDir="false" afterPath="$PROJECT_DIR$/babasport-service-product/src/main/resources/fdfs_client.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/babasport-service-product/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/babasport-service-product/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/babasport-service-product/target/classes/application-context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/babasport-service-product/target/classes/application-context.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/babasport-service-product/target/classes/cn/itcast/core/service/TestTbServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/babasport-service-product/target/classes/cn/itcast/core/service/TestTbServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/babasport-service-product/target/classes/cn/itcast/core/service/product/BrandServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/babasport-service-product/target/classes/cn/itcast/core/service/product/BrandServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/babasport-service-product/target/classes/cn/itcast/core/service/product/UploadServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/babasport-service-product/target/classes/config/anonation.xml" beforeDir="false" afterPath="$PROJECT_DIR$/babasport-service-product/target/classes/config/anonation.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/babasport-service-product/target/classes/config/dubbo-provider.xml" beforeDir="false" afterPath="$PROJECT_DIR$/babasport-service-product/target/classes/config/dubbo-provider.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/babasport-service-product/target/classes/config/jdbc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/babasport-service-product/target/classes/config/jdbc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/babasport-service-product/target/classes/config/mybatis.xml" beforeDir="false" afterPath="$PROJECT_DIR$/babasport-service-product/target/classes/config/mybatis.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/babasport-service-product/target/classes/config/property.xml" beforeDir="false" afterPath="$PROJECT_DIR$/babasport-service-product/target/classes/config/property.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/babasport-service-product/target/classes/fdfs_client.conf" beforeDir="false" afterPath="$PROJECT_DIR$/babasport-service-product/target/classes/fdfs_client.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/babasport-service-product/target/m2e-wtp/web-resources/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/babasport-service-product/target/m2e-wtp/web-resources/META-INF/maven/cn.itcast.babasport/babasport-service-product/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/babasport-service-product/target/m2e-wtp/web-resources/META-INF/maven/cn.itcast.babasport/babasport-service-product/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/babasport-service-product/target/test-classes/cn/itcast/TestTbTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/babasport-service-product/target/test-classes/cn/itcast/TestTbTest.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="$PROJECT_DIR$/../../../dinger/maven/apache-maven-3.6.0-bin/apache-maven-3.6.0" />
-        <option name="userSettingsFile" value="C:\xbb\babasportMaven\settings.xml" />
+        <option name="userSettingsFile" value="E:\XBB\babasportMaven\settings.xml" />
       </MavenGeneralSettings>
     </option>
   </component>
@@ -27,11 +98,178 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../tools/apache-tomcat-7.0.93/webapps" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15429688" />
+    <property name="project.structure.side.proportion" value="0.22988506" />
+    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
   </component>
   <component name="RebelAgentSelection">
     <selection>jr</selection>
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\XBB\ideaProject\parent191\babasport-service-product\src\main\resources" />
+      <recent name="E:\XBB\ideaProject\parent191\babasport-service-product\src\main\resources\config" />
+      <recent name="E:\XBB\ideaProject\parent191\babasport-service-product\src\main\java\cn\itcast\core\service" />
+      <recent name="E:\XBB\ideaProject\parent191\babasport-service-product\src\main\java\cn\itcast\core\service\upload" />
+      <recent name="E:\XBB\ideaProject\parent191\babasport-interface\src\main\java\cn\itcast\core\service" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Tomcat Server.console">
+    <configuration name="console" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7.0.93" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="C:\Program Files\Java\jdk1.7.0_80\jre">
+      <option name="COMMON_VM_ARGUMENTS" value="-Dfile.encoding=utf-8" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="babasport-console:war">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_parent191_2" />
+        <option name="HTTP_PORT" value="8082" />
+        <option name="JNDI_PORT" value="1199" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="51094" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="babasport-console:war" />
+        </option>
+      </method>
+    </configuration>
+    <configuration name="service-product" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7.0.93" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="C:\Program Files\Java\jdk1.7.0_80\jre">
+      <option name="COMMON_VM_ARGUMENTS" value="-Dfile.encoding=utf-8" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="babasport-service-product:war">
+          <settings>
+            <option name="CONTEXT_PATH" value="/babasport_service_product_war" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_parent191" />
+        <option name="HTTP_PORT" value="8081" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="51010" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="babasport-service-product:war" />
+        </option>
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Tomcat Server.service-product" />
+      <item itemvalue="Tomcat Server.console" />
+    </list>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -44,6 +282,8 @@
       <option name="presentableId" value="Default" />
       <updated>1596517742009</updated>
       <workItem from="1596517745736" duration="315000" />
+      <workItem from="1596557155483" duration="1190000" />
+      <workItem from="1596558367448" duration="1560000" />
     </task>
     <servers />
   </component>
@@ -51,13 +291,95 @@
     <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="583" y="294" key="FileChooserDialogImpl" timestamp="1596517975543">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="230" y="76" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1596559622772">
+      <screen x="0" y="0" width="1549" height="840" />
     </state>
+    <state x="230" y="76" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1549.840@0.0.1549.840" timestamp="1596559622772" />
+    <state x="505" y="168" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1596557775247">
+      <screen x="0" y="0" width="1549" height="840" />
+    </state>
+    <state x="505" y="168" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1549.840@0.0.1549.840" timestamp="1596557775247" />
+    <state x="470" y="237" key="FileChooserDialogImpl" timestamp="1596559409255">
+      <screen x="0" y="0" width="1549" height="840" />
+    </state>
+    <state x="470" y="237" key="FileChooserDialogImpl/0.0.1549.840@0.0.1549.840" timestamp="1596559409255" />
     <state x="583" y="294" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1596517975543" />
-    <state x="461" y="164" key="SettingsEditor" timestamp="1596518054370">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1222" height="349" key="GridCell.Tab.0.bottom" timestamp="1596559817329">
+      <screen x="0" y="0" width="1549" height="840" />
     </state>
+    <state width="1222" height="349" key="GridCell.Tab.0.bottom/0.0.1549.840@0.0.1549.840" timestamp="1596559817329" />
+    <state width="1222" height="349" key="GridCell.Tab.0.center" timestamp="1596559817329">
+      <screen x="0" y="0" width="1549" height="840" />
+    </state>
+    <state width="1222" height="349" key="GridCell.Tab.0.center/0.0.1549.840@0.0.1549.840" timestamp="1596559817329" />
+    <state width="1222" height="349" key="GridCell.Tab.0.left" timestamp="1596559817329">
+      <screen x="0" y="0" width="1549" height="840" />
+    </state>
+    <state width="1222" height="349" key="GridCell.Tab.0.left/0.0.1549.840@0.0.1549.840" timestamp="1596559817329" />
+    <state width="1222" height="349" key="GridCell.Tab.0.right" timestamp="1596559817329">
+      <screen x="0" y="0" width="1549" height="840" />
+    </state>
+    <state width="1222" height="349" key="GridCell.Tab.0.right/0.0.1549.840@0.0.1549.840" timestamp="1596559817329" />
+    <state width="1222" height="349" key="GridCell.Tab.1.bottom" timestamp="1596559817329">
+      <screen x="0" y="0" width="1549" height="840" />
+    </state>
+    <state width="1222" height="349" key="GridCell.Tab.1.bottom/0.0.1549.840@0.0.1549.840" timestamp="1596559817329" />
+    <state width="1222" height="349" key="GridCell.Tab.1.center" timestamp="1596559817329">
+      <screen x="0" y="0" width="1549" height="840" />
+    </state>
+    <state width="1222" height="349" key="GridCell.Tab.1.center/0.0.1549.840@0.0.1549.840" timestamp="1596559817329" />
+    <state width="1222" height="349" key="GridCell.Tab.1.left" timestamp="1596559817329">
+      <screen x="0" y="0" width="1549" height="840" />
+    </state>
+    <state width="1222" height="349" key="GridCell.Tab.1.left/0.0.1549.840@0.0.1549.840" timestamp="1596559817329" />
+    <state width="1222" height="349" key="GridCell.Tab.1.right" timestamp="1596559817329">
+      <screen x="0" y="0" width="1549" height="840" />
+    </state>
+    <state width="1222" height="349" key="GridCell.Tab.1.right/0.0.1549.840@0.0.1549.840" timestamp="1596559817329" />
+    <state width="1222" height="349" key="GridCell.Tab.2.bottom" timestamp="1596559817090">
+      <screen x="0" y="0" width="1549" height="840" />
+    </state>
+    <state width="1222" height="349" key="GridCell.Tab.2.bottom/0.0.1549.840@0.0.1549.840" timestamp="1596559817090" />
+    <state width="1222" height="349" key="GridCell.Tab.2.center" timestamp="1596559817090">
+      <screen x="0" y="0" width="1549" height="840" />
+    </state>
+    <state width="1222" height="349" key="GridCell.Tab.2.center/0.0.1549.840@0.0.1549.840" timestamp="1596559817090" />
+    <state width="1222" height="349" key="GridCell.Tab.2.left" timestamp="1596559817090">
+      <screen x="0" y="0" width="1549" height="840" />
+    </state>
+    <state width="1222" height="349" key="GridCell.Tab.2.left/0.0.1549.840@0.0.1549.840" timestamp="1596559817090" />
+    <state width="1222" height="349" key="GridCell.Tab.2.right" timestamp="1596559817090">
+      <screen x="0" y="0" width="1549" height="840" />
+    </state>
+    <state width="1222" height="349" key="GridCell.Tab.2.right/0.0.1549.840@0.0.1549.840" timestamp="1596559817090" />
+    <state width="1222" height="349" key="GridCell.Tab.3.bottom" timestamp="1596559817090">
+      <screen x="0" y="0" width="1549" height="840" />
+    </state>
+    <state width="1222" height="349" key="GridCell.Tab.3.bottom/0.0.1549.840@0.0.1549.840" timestamp="1596559817090" />
+    <state width="1222" height="349" key="GridCell.Tab.3.center" timestamp="1596559817090">
+      <screen x="0" y="0" width="1549" height="840" />
+    </state>
+    <state width="1222" height="349" key="GridCell.Tab.3.center/0.0.1549.840@0.0.1549.840" timestamp="1596559817090" />
+    <state width="1222" height="349" key="GridCell.Tab.3.left" timestamp="1596559817090">
+      <screen x="0" y="0" width="1549" height="840" />
+    </state>
+    <state width="1222" height="349" key="GridCell.Tab.3.left/0.0.1549.840@0.0.1549.840" timestamp="1596559817090" />
+    <state width="1222" height="349" key="GridCell.Tab.3.right" timestamp="1596559817090">
+      <screen x="0" y="0" width="1549" height="840" />
+    </state>
+    <state width="1222" height="349" key="GridCell.Tab.3.right/0.0.1549.840@0.0.1549.840" timestamp="1596559817090" />
+    <state x="372" y="0" key="SettingsEditor" timestamp="1596559557494">
+      <screen x="0" y="0" width="1549" height="840" />
+    </state>
+    <state x="372" y="0" key="SettingsEditor/0.0.1549.840@0.0.1549.840" timestamp="1596559557494" />
     <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1596518054370" />
+    <state x="476" y="162" width="597" height="516" key="find.popup" timestamp="1596559926328">
+      <screen x="0" y="0" width="1549" height="840" />
+    </state>
+    <state x="476" y="162" width="597" height="516" key="find.popup/0.0.1549.840@0.0.1549.840" timestamp="1596559926328" />
+    <state x="437" y="161" width="672" height="678" key="search.everywhere.popup" timestamp="1596558659433">
+      <screen x="0" y="0" width="1549" height="840" />
+    </state>
+    <state x="437" y="161" width="672" height="678" key="search.everywhere.popup/0.0.1549.840@0.0.1549.840" timestamp="1596558659433" />
   </component>
 </project>

@@ -12,7 +12,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
 import cn.itcast.common.web.Constants;
-import cn.itcast.core.service.product.UploadService;
+import cn.itcast.core.service.upload.UploadService;
+
 
 /**
  * 上传图片
@@ -28,6 +29,7 @@ public class UploadController {
 	@RequestMapping(value = "/upload/uploadPic.do")
 	public void uploadPic(@RequestParam(required = false) MultipartFile pic
 			,HttpServletResponse response) throws IOException{
+		System.out.println(pic);
 		
 		String path = uploadService.uploadPic(pic.getBytes(), pic.getOriginalFilename(), pic.getSize());
 		

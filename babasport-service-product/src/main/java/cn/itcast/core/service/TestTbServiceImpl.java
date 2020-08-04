@@ -8,11 +8,12 @@ import cn.itcast.core.bean.TestTb;
 import cn.itcast.core.dao.TestTbDao;
 
 /**
- * 测试
+ * 测试事务
  * @author lx
  *
  */
 @Service("testTbService")
+// 可以加载类上也可以加载方法上
 @Transactional
 public class TestTbServiceImpl implements TestTbService {
 
@@ -20,9 +21,11 @@ public class TestTbServiceImpl implements TestTbService {
 	@Autowired
 	private TestTbDao testTbDao;
 	
-	public void insertTestTb(TestTb testTb){
+	@Override
+	// @Transactional
+	public void insertTestTb(TestTb testTb) {
 		testTbDao.insertTestTb(testTb);
-		//throw new RuntimeException();
+//		throw new RuntimeException();
 	}
 	
 }
