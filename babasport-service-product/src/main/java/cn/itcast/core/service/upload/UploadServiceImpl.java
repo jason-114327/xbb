@@ -1,14 +1,19 @@
-package cn.itcast.core.service.product;
+package cn.itcast.core.service.upload;
 
 import org.springframework.stereotype.Service;
 
 import cn.itcast.common.fdfs.FastDFSUtils;
 
-@Service("uploadService")
+@Service(value = "uploadService")
 public class UploadServiceImpl implements UploadService{
 
-	
-	//上传图片
+	/**
+	 * 上传图片
+	 * @param pic
+	 * @param name
+	 * @param size
+	 * @return
+	 */
 	public String uploadPic(byte[] pic ,String name,long size){
 		return FastDFSUtils.uploadPic(pic, name, size);
 	}
