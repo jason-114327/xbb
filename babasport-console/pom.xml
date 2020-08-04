@@ -11,7 +11,7 @@
   
     <!-- 依赖管理 -->
   <!-- babasport-interface -->
-  <dependencies>
+  <dependencies> 
   	<dependency>
   		 <groupId>cn.itcast.babasport</groupId>
     	<artifactId>babasport-interface</artifactId>
