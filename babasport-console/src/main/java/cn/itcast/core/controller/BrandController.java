@@ -40,7 +40,6 @@ public class BrandController {
 		
 		return "brand/list";
 	}
-	
 	//去修改页面
 	@RequestMapping(value = "/brand/toEdit.do")
 	public String toEdit(Long id,Model model){
