@@ -18,8 +18,8 @@
 <form action="/brand/list.do" method="post" style="padding-top:5px;">
 品牌名称: <input type="text" name="name" value="${name}"/>
 	<select name="isDisplay">
-		<option value="1" <c:if test="${isDisplay == 1 }">selected="selected"</c:if>>是</option>
-		<option value="0" <c:if test="${isDisplay == 0 }">selected="selected"</c:if>>否</option>
+		<option value="1" <c:if test="${isDisplay == 1}"> selected="selected"" </c:if>>是</option>
+		<option value="0" <c:if test="${isDisplay == 0}"> selected="selected"" </c:if>>否</option>
 	</select>
 	<input type="submit" class="query" value="查询"/>
 </form>
@@ -37,33 +37,30 @@
 		</tr>
 	</thead>
 	<tbody class="pn-ltbody">
-	<c:forEach items="${pagination.list }" var="brand">
-		<tr bgcolor="#ffffff" onmouseout="this.bgColor='#ffffff'" onmouseover="this.bgColor='#eeeeee'">
-			<td><input type="checkbox" value="${brand.id }" name="ids"/></td>
-			<td align="center">${brand.id }</td>
-			<td align="center">${brand.name }</td>
-			<td align="center"><img width="40" height="40" src="/images/pic/ppp.jpg"/></td>
-			<td align="center"></td>
-			<td align="center">99</td>
-			<td align="center">
-				<c:if test="${brand.isDisplay == 1 }">是</c:if>
-				<c:if test="${brand.isDisplay == 0 }">否</c:if>
-			</td>
-			<td align="center">
-			<a class="pn-opt" href="/brand/toEdit.do?id=${brand.id }">修改</a> | <a class="pn-opt" onclick="if(!confirm('您确定删除吗？')) {return false;}" href="#">删除</a>
-			</td>
-		</tr>
-	</c:forEach>
-	
-		
-	
+		<c:forEach items="${pagination.list }" var="brand">
+			<tr bgcolor="#ffffff" onmouseout="this.bgColor='#ffffff'" onmouseover="this.bgColor='#eeeeee'">
+				<td><input type="checkbox" value="${brand.id }" name="ids"/></td>
+				<td align="center">${brand.id }</td>
+				<td align="center">${brand.name }</td>
+				<td align="center"><img width="40" height="40" src="/images/pic/ppp.jpg"/></td>
+				<td align="center"></td>
+				<td align="center">99</td>
+				<td align="center">
+					<c:if test="${brand.isDisplay == 1 }">是</c:if>
+					<c:if test="${brand.isDisplay == 0 }">否</c:if>
+				</td>
+				<td align="center">
+				<a class="pn-opt" href="/brand/toEdit.do?id=${brand.id} ">修改</a> | <a class="pn-opt" onclick="if(!confirm('您确定删除吗？')) {return false;}" href="#">删除</a>
+				</td>
+			</tr>
+		</c:forEach>
 	</tbody>
 </table>
 <div class="page pb15">
 	<span class="r inb_a page_b">
 		<c:forEach items="${pagination.pageView }" var="page">
 			${page }
-		</c:forEach>
+		</c:forEach>	
 	</span>
 </div>
 <div style="margin-top:15px;"><input class="del-button" type="button" value="删除" onclick="optDelete();"/></div>

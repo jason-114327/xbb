@@ -10,7 +10,7 @@
 		<result column="is_display" property="isDisplay"/>
 	</resultMap>
 	<!-- 查询 -->
-	<select id="selectBrandListByQuery" parameterType="BrandQuery" resultMap="brand">
+	<select id="selectBrandListByQuery" parameterType="cn.itcast.core.bean.product.BrandQuery" resultMap="brand">
 		select id , name ,description,img_url,sort,is_display
 		from bbs_brand
 		<where>
@@ -26,7 +26,7 @@
 		</if>
 	</select>
 	<!-- 查询总条数-->
-	<select id="selectCount" parameterType="BrandQuery" resultType="Integer">
+	<select id="selectCount" parameterType="cn.itcast.core.bean.product.BrandQuery" resultType="Integer">
 		select count(1)
 		from bbs_brand
 		<where>

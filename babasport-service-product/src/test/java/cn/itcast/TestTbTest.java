@@ -22,15 +22,19 @@ import cn.itcast.core.service.TestTbService;
 public class TestTbTest {
 
 	@Autowired
+	private TestTbDao testTableDao;
+	
+	@Autowired
 	private TestTbService testTbService;
 	
 	@Test
 	public void testAdd() throws Exception {
 		TestTb testTb = new TestTb();
-		testTb.setName("范冰冰2");
+		testTb.setName("范冰冰1");
 		testTb.setBirthday(new Date());
 		
 		testTbService.insertTestTb(testTb);
+//		testTableDao.insertTestTb(testTb);
 		
 		
 	}

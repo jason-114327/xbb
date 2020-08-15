@@ -7,20 +7,19 @@
   </parent>
   <artifactId>babasport-interface</artifactId>
   
-  
-  <!-- 依赖管理 -->
-  <!-- babasport-common -->
+ <!-- 依赖管理 -->
+  <!-- babasport-pojo -->
   <dependencies>
   	<dependency>
-  		 <groupId>cn.itcast.babasport</groupId>
-    	<artifactId>babasport-pojo</artifactId>
-    	<version>0.0.1-SNAPSHOT</version>
+  		<groupId>cn.itcast.babasport</groupId>
+  		<artifactId>babasport-pojo</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
   	</dependency>
-  			<!-- tomcat7 servlet-api -->
-		<dependency>
-			<groupId>org.apache.tomcat</groupId>
-			<artifactId>tomcat-jsp-api</artifactId>
-			<scope>provided</scope>
-		</dependency>
-  </dependencies>
+  	<!-- tomcat7 servlet-api -->
+	<dependency>
+		<groupId>org.apache.tomcat</groupId>
+		<artifactId>tomcat-jsp-api</artifactId>
+		<scope>provided</scope>
+	</dependency>
+  </dependencies>  
 </project>

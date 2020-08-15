@@ -16,7 +16,7 @@ import cn.itcast.core.service.product.BrandService;
  * 修改
  * 添加
  * 删除（单）
- * @author lx
+ * @author lxw
  *
  */
 @Controller
@@ -40,6 +40,7 @@ public class BrandController {
 		
 		return "brand/list";
 	}
+	
 	//去修改页面
 	@RequestMapping(value = "/brand/toEdit.do")
 	public String toEdit(Long id,Model model){

@@ -5,8 +5,8 @@
     <artifactId>parent191</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>babasport-common</artifactId>
-
+  <artifactId> babasport-common</artifactId>
+  
   <!-- 依赖管理之后台 -->
 	<dependencies>
 		<!-- with junit4.12 -->
@@ -220,6 +220,4 @@
 			<scope>provided</scope>
 		</dependency>
 	</dependencies>
-  
-  
 </project>
