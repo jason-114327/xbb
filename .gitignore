@@ -2,6 +2,7 @@
 *.iml
 *.ipr
 target/
+/target
 .settings
 .project
 .classpath
