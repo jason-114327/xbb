@@ -9,5 +9,8 @@ target/
 *.class
 *svn/
 .idea/
+.idea
+*.idea
+*.idea/
 *.jar
 ~*
