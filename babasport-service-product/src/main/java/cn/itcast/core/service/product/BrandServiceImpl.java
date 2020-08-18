@@ -70,5 +70,9 @@ public class BrandServiceImpl implements BrandService {
 		brandDao.updateBrandById(brand);
 	}
 
+	@Override
+	public void deletes(Long[] ids) {
+		brandDao.deletes(ids);
+	}
 
 }
