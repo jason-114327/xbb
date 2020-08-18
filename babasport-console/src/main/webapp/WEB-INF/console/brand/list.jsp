@@ -42,7 +42,7 @@
 				<td><input type="checkbox" value="${brand.id }" name="ids"/></td>
 				<td align="center">${brand.id }</td>
 				<td align="center">${brand.name }</td>
-				<td align="center"><img width="40" height="40" src="/images/pic/ppp.jpg"/></td>
+				<td align="center"><img width="40" height="40" src="${brand.imgUrl}"/></td>
 				<td align="center"></td>
 				<td align="center">99</td>
 				<td align="center">
