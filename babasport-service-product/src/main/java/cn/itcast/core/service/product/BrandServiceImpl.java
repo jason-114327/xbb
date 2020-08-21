@@ -11,6 +11,8 @@ import cn.itcast.core.bean.product.Brand;
 import cn.itcast.core.bean.product.BrandQuery;
 import cn.itcast.core.dao.product.BrandDao;
 
+import java.util.List;
+
 /**
  * 品牌管理实现类
  * 
@@ -25,6 +27,7 @@ public class BrandServiceImpl implements BrandService {
 	private BrandDao brandDao;
 
 	// 查询分页对象
+	@Override
 	public Pagination selectPaginationByQuery(String name, Integer isDisplay, Integer pageNo) {
 		BrandQuery brandQuery = new BrandQuery();
 		// 当前页
@@ -57,6 +60,13 @@ public class BrandServiceImpl implements BrandService {
 		String url = "/brand/list.do";
 		pagination.pageView(url, params.toString());
 		return pagination;
+	}
+
+	@Override
+	public List<Brand> selectBrandListByQuery(Integer isDisplay) {
+		BrandQuery query = new BrandQuery();
+		query.setIsDisplay(isDisplay);
+		return brandDao.selectBrandListByQuery(query);
 	}
 
 	@Override

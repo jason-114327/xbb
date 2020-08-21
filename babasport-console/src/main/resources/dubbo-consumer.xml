@@ -33,6 +33,7 @@
 	<dubbo:reference interface="cn.itcast.core.service.TestTbService" id="testTbService"></dubbo:reference>
 	<dubbo:reference interface="cn.itcast.core.service.product.BrandService" id="brandService"></dubbo:reference>
 	<dubbo:reference interface="cn.itcast.core.service.upload.UploadService" id="uploadService"></dubbo:reference>
+	<dubbo:reference interface="cn.itcast.core.service.product.ProductService" id="productService"></dubbo:reference>
 	<!-- 全局设置 设置dubbo连接超时时间：10分钟（默认一秒钟） -->
 	<dubbo:consumer timeout="600000" check="false"></dubbo:consumer>
 </beans>
