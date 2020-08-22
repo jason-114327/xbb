@@ -3,6 +3,7 @@ package cn.itcast.core.controller;
 import cn.itcast.common.page.Pagination;
 import cn.itcast.core.bean.product.Brand;
 import cn.itcast.core.bean.product.Color;
+import cn.itcast.core.bean.product.Product;
 import cn.itcast.core.service.product.BrandService;
 import cn.itcast.core.service.product.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -55,4 +56,11 @@ public class ProductController {
         return "product/add";
     }
 
+    //商品保存
+    @RequestMapping(value = "/product/add.do")
+    public String add(Product product){
+        productService.insertProduct(product);
+
+        return "redirect:/product/list.do";
+    }
 }

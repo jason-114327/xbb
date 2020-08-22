@@ -88,6 +88,5 @@ public class UploadController {
             response.setContentType("application/json;charset=UTF-8");
             response.getWriter().write(jo.toString());
         }
-
     }
 }
