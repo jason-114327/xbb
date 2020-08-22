@@ -1,11 +1,16 @@
 package cn.itcast.core.service.product;
 
 import cn.itcast.common.page.Pagination;
+import cn.itcast.core.bean.product.Color;
+import cn.itcast.core.bean.product.ColorQuery;
 import cn.itcast.core.bean.product.ProductQuery;
+import cn.itcast.core.dao.product.ColorDao;
 import cn.itcast.core.dao.product.ProductDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
 
 /**
  * 商品管理实现类
@@ -24,6 +29,7 @@ public class ProductServiceImpl implements ProductService {
 
         ProductQuery productQuery = new ProductQuery();
         productQuery.setPageNo(Pagination.cpn(pageNo));
+        productQuery.setOrderByClause("id desc");
         ProductQuery.Criteria criteria = productQuery.createCriteria();
         if(name != null){
             criteria.andNameLike("%"+name+"%");
@@ -48,5 +54,15 @@ public class ProductServiceImpl implements ProductService {
         String url = "/product/list.do";
         pagination.pageView(url,params.toString());
         return pagination;
+    }
+
+    //加载颜色
+    @Autowired
+    private ColorDao colorDao;
+    //颜色结果集
+    public List<Color> selectColorList(){
+        ColorQuery colorQuery = new ColorQuery();
+        colorQuery.createCriteria().andParentIdNotEqualTo(0L);
+        return colorDao.selectByExample(colorQuery);
     }
 }

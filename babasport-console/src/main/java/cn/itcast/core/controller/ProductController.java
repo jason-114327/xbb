@@ -2,6 +2,7 @@ package cn.itcast.core.controller;
 
 import cn.itcast.common.page.Pagination;
 import cn.itcast.core.bean.product.Brand;
+import cn.itcast.core.bean.product.Color;
 import cn.itcast.core.service.product.BrandService;
 import cn.itcast.core.service.product.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -45,12 +46,13 @@ public class ProductController {
     //去商品添加页面
     @RequestMapping(value = "/product/toAdd.do")
     public String toAdd(Model model){
-        /*//品牌的结果集
+        //品牌的结果集
         List<Brand> brands = brandService.selectBrandListByQuery(1);
         model.addAttribute("brands", brands);
 
         List<Color> colors = productService.selectColorList();
-        model.addAttribute("colors", colors);*/
+        model.addAttribute("colors", colors);
         return "product/add";
     }
+
 }
