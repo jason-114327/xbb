@@ -70,12 +70,16 @@ public class ProductServiceImpl implements ProductService {
 
     @Autowired
     private SkuDao skuDao;
+    @Autowired
+    private Jedis jedis;
+
     //商品保存
     public void insertProduct(Product product) {
-        //保存商品
-//		下架状态 后台程序写的
+        Long pno = jedis.incr("pno");// 获取缓存值且+1
+        product.setId(pno);
+        //架状态 后台程序写的
         product.setIsShow(false);
-//		删除  后台程序写的不删除
+        //删除  后台程序写的不删除
         product.setIsDel(true);
         productDao.insertSelective(product);
         //返回ID

@@ -201,6 +201,10 @@ public class Product implements Serializable {
         this.createTime = createTime;
     }
 
+    public String[] getImages(){
+        return imgUrl.split(",");
+    }
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();

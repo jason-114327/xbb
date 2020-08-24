@@ -70,7 +70,7 @@
 					<td><input type="checkbox" name="ids" value="${product.id }"/></td>
 					<td>${product.id }</td>
 					<td align="center">${product.name }</td>
-					<td align="center"><img width="50" height="50" src="/images/pic/ppp.jpg"/></td>
+					<td align="center"><img width="50" height="50" src="${product.images[0]}"/></td>
 					<td align="center">是</td>
 					<td align="center">是</td>
 					<td align="center">是</td>
