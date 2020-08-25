@@ -1,6 +1,5 @@
 package cn.itcast.core.service.product;
 
-
 import cn.itcast.common.page.Pagination;
 import cn.itcast.core.bean.product.Color;
 import cn.itcast.core.bean.product.Product;
@@ -17,4 +16,7 @@ public interface ProductService {
 
     //商品保存
     public void insertProduct(Product product);
+
+    //上架
+    public void isShow(Long[] ids);
 }
