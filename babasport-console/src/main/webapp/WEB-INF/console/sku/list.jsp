@@ -4,6 +4,52 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <title>babasport-list</title>
+<script type="text/javascript">
+	//修改
+	function updateSku(skuId){
+		// 先全部禁用
+		$('input[name=input01]').attr("disabled",true);
+		$('input[name=input02]').attr("disabled",true);
+		$('input[name=input03]').attr("disabled",true);
+		$('input[name=input04]').attr("disabled",true);
+		$('input[name=input05]').attr("disabled",true);
+
+		//市场价
+		$("#m" + skuId).attr("disabled",false);
+		//售价
+		$("#p" + skuId).attr("disabled",false);
+		//库存
+		$("#s" + skuId).attr("disabled",false);
+		//限制
+		$("#l" + skuId).attr("disabled",false);
+		//费用
+		$("#f" + skuId).attr("disabled",false);
+	}
+	//保存
+	function addSku(skuId){
+		//市场价
+		var m = $("#m" + skuId).attr("disabled",true).val();
+		//售价
+		var p = $("#p" + skuId).attr("disabled",true).val();
+		//库存
+		var s = $("#s" + skuId).attr("disabled",true).val();
+		//限制
+		var l = $("#l" + skuId).attr("disabled",true).val();
+		//费用
+		var f = $("#f" + skuId).attr("disabled",true).val();
+		var url = "/sku/addSku.do";
+		var params = {"marketPrice" : m , "price" : p , "stock" : s , "upperLimit" : l , "deliveFee" : f , "id" : skuId};
+		//var params = '{"marketPrice" : ' + m + ' , "price" : p , "stock" : s , "upperLimit" : l , "deliveFee" : f , "id" : skuId}';
+
+		//异步保存数据到库中
+		$.post(url,params,function(data){
+			alert(data.message);
+		},"json");
+
+
+	}
+
+</script>
 </head>
 <body>
 <div class="box-positon">
@@ -35,13 +81,13 @@
 				<td>${sku.productId}</td>
 				<td align="center">${sku.color.name}</td>
 				<td align="center">${sku.size}</td>
-				<td align="center"><input type="text" id="m52" value="${sku.marketPrice}" disabled="disabled" size="10"/></td>
-				<td align="center"><input type="text" id="p52" value="${sku.price}" disabled="disabled" size="10"/></td>
-				<td align="center"><input type="text" id="i52" value="${sku.stock}" disabled="disabled" size="10"/></td>
-				<td align="center"><input type="text" id="l52" value="${sku.upperLimit}" disabled="disabled" size="10"/></td>
-				<td align="center"><input type="text" id="f52" value="${sku.deliveFee}" disabled="disabled" size="10"/></td>
+				<td align="center"><input type="text" name="input01" id="m${sku.id }" value="${sku.marketPrice }" disabled="disabled" size="10"/></td>
+				<td align="center"><input type="text" name="input02" id="p${sku.id }" value="${sku.price }" disabled="disabled" size="10"/></td>
+				<td align="center"><input type="text" name="input03" id="s${sku.id }" value="${sku.stock }" disabled="disabled" size="10"/></td>
+				<td align="center"><input type="text" name="input04" id="l${sku.id }" value="${sku.upperLimit }" disabled="disabled" size="10"/></td>
+				<td align="center"><input type="text" name="input05" id="f${sku.id }" value="${sku.deliveFee }" disabled="disabled" size="10"/></td>
 				<td align="center">不是</td>
-				<td align="center"><a href="javascript:updateSku(52)" class="pn-opt">修改</a> | <a href="javascript:addSku(52)" class="pn-opt">保存</a></td>
+				<td align="center"><a href="javascript:updateSku('${sku.id }')" class="pn-opt">修改</a> | <a href="javascript:addSku('${sku.id }')" class="pn-opt">保存</a></td>
 			</tr>
 		</c:forEach>
 	</tbody>
