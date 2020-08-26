@@ -20,9 +20,13 @@
 		http://code.alibabatech.com/schema/dubbo        
 		http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
 		
-	<!-- 扫描 -->
+	<!-- 扫描 @Contr-->
 	<context:component-scan base-package="cn.itcast"/>
-	<!-- 处理器 映射器 适配器 -->	
+	<!--访问静态资源-->
+	<mvc:resources location="/js/" mapping="/js/**"/>
+	<mvc:resources location="/css/" mapping="/css/**"/>
+	<mvc:resources location="/images/" mapping="/images/**"/>
+	<!-- 处理器 映射器 适配器 -->
 	<mvc:annotation-driven/>
 	<!-- 视图解释器 jsp -->
 	<bean id="jspViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
