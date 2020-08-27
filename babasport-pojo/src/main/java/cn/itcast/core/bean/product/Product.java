@@ -45,7 +45,7 @@ public class Product implements Serializable {
     private Boolean isShow;
 
     /**
-     * 商品图片集
+     * 商品图片集  img
      */
     private String imgUrl;
 
@@ -67,7 +67,7 @@ public class Product implements Serializable {
     /**
      * 颜色集
      */
-    private String colors;
+    private String colors;//1,2,3,4
 
     /**
      * 尺寸集
@@ -79,6 +79,22 @@ public class Product implements Serializable {
      */
     private Date createTime;
 
+
+    //附加方法
+    public String[] getImages(){
+        return imgUrl.split(",");
+    }
+    //附加字段
+    private Float price;//最低价
+
+
+    public Float getPrice() {
+        return price;
+    }
+
+    public void setPrice(Float price) {
+        this.price = price;
+    }
     private static final long serialVersionUID = 1L;
 
     public Long getId() {
@@ -199,10 +215,6 @@ public class Product implements Serializable {
 
     public void setCreateTime(Date createTime) {
         this.createTime = createTime;
-    }
-
-    public String[] getImages(){
-        return imgUrl.split(",");
     }
 
     @Override
