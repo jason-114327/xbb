@@ -24,7 +24,7 @@ public class CustomMessageListener implements MessageListener{
 		try {
 			System.out.println("ActiveMq中的消息是:" + am.getText());
 			//保存商品信息到Solr服务器
-			//searchService.insertProductToSolr(Long.parseLong(am.getText()));
+			searchService.insertProductToSolr(Long.parseLong(am.getText()));
 		} catch (JMSException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
