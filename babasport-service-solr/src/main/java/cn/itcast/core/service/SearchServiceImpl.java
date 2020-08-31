@@ -26,25 +26,38 @@ public class SearchServiceImpl implements SearchService {
 
 	@Autowired
 	private SolrServer solrServer;
-	
+
 	//全文检索
-	public Pagination selectPaginationByQuery(Integer pageNo,String keyword) throws Exception{
+	public Pagination selectPaginationByQuery(Integer pageNo,String keyword,Long brandId,String price) throws Exception{
 		//创建包装类
-	    ProductQuery productQuery = new ProductQuery();
-	    //当前页
-	    productQuery.setPageNo(Pagination.cpn(pageNo));
-	    //每页显示 12条
-	    productQuery.setPageSize(12);
-	    
-	    //拼接条件
-	    StringBuilder params = new StringBuilder();
-	    
+		ProductQuery productQuery = new ProductQuery();
+		//当前页
+		productQuery.setPageNo(Pagination.cpn(pageNo));
+		//每页显示 12条
+		productQuery.setPageSize(12);
+
+		//拼接条件
+		StringBuilder params = new StringBuilder();
+
 		List<Product> products = new ArrayList<Product>();
 		SolrQuery solrQuery = new SolrQuery();
 		//关键词
 		solrQuery.set("q", "name_ik:" + keyword);
 		params.append("keyword=").append(keyword);
 		//过滤条件
+		if(null != brandId){
+			solrQuery.addFilterQuery("brandId:" + brandId);
+		}
+		//价格   0-99 1600
+		if(null != price){
+			String[] p = price.split("-");
+			if(p.length == 2){
+				solrQuery.addFilterQuery("price:[" + p[0] + " TO " + p[1] + "]");
+			}else{
+				solrQuery.addFilterQuery("price:[" + p[0] + " TO *]");
+			}
+		}
+
 		//高亮
 		solrQuery.setHighlight(true);
 		solrQuery.addHighlightField("name_ik");
@@ -58,7 +71,7 @@ public class SearchServiceImpl implements SearchService {
 		solrQuery.setRows(productQuery.getPageSize());
 		//执行查询
 		QueryResponse response = solrServer.query(solrQuery);
-		
+
 		//取高亮
 		Map<String, Map<String, List<String>>> highlighting = response.getHighlighting();
 		// Map K : V    442 : Map
@@ -71,7 +84,7 @@ public class SearchServiceImpl implements SearchService {
 		for (SolrDocument doc : docs) {
 			//创建商品对象
 			Product product = new Product();
-			//商品ID 
+			//商品ID
 			String id = (String) doc.get("id");
 			product.setId(Long.parseLong(id));
 			//商品名称  ik
@@ -84,12 +97,10 @@ public class SearchServiceImpl implements SearchService {
 			String url = (String) doc.get("url");
 			product.setImgUrl(url);//img,img2,img3
 			//价格 售价   select price from bbs_sku where product_id =442 order by price asc limit 0,1
-			Float price = (Float) doc.get("price");
-			product.setPrice(price);
+			product.setPrice((Float) doc.get("price"));
 			//品牌ID Long
-			Integer brandId = (Integer) doc.get("brandId");
-			product.setBrandId(Long.parseLong(String.valueOf(brandId)));
-			
+			product.setBrandId(Long.parseLong(String.valueOf((Integer) doc.get("brandId"))));
+
 			products.add(product);
 		}
 		//构建分页对象
@@ -98,11 +109,11 @@ public class SearchServiceImpl implements SearchService {
 				productQuery.getPageSize(),
 				(int)numFound,
 				products
-				);
+		);
 		//页面展示
 		String url = "/search";
 		pagination.pageView(url, params.toString());
-		
+
 		return pagination;
 	}
 }
