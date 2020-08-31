@@ -10,8 +10,12 @@ import cn.itcast.common.page.Pagination;
 import cn.itcast.core.bean.product.Brand;
 import cn.itcast.core.bean.product.BrandQuery;
 import cn.itcast.core.dao.product.BrandDao;
+import redis.clients.jedis.Jedis;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 /**
  * 品牌管理实现类
@@ -69,14 +73,34 @@ public class BrandServiceImpl implements BrandService {
 		return brandDao.selectBrandListByQuery(query);
 	}
 
+	// 从redis中查询
+	@Override
+	public List<Brand> selectBrandListByRedis(){
+		List<Brand> brands = new ArrayList<>();
+		// redis中查
+		Map<String,String> hgetAll = jedis.hgetAll("brand");
+		Set<Map.Entry<String,String>> entrySet = hgetAll.entrySet();
+		for (Map.Entry<String,String> entry:entrySet){
+			Brand brand = new Brand();
+			brand.setId(Long.parseLong(entry.getKey()));
+			brand.setName(entry.getValue());
+			brands.add(brand);
+		}
+		return brands;
+	}
+
 	@Override
 	public Brand selectBrandById(Long id) {
 		// TODO Auto-generated method stub
 		return brandDao.selectBrandById(id);
 	}
 
+	@Autowired
+	Jedis jedis;
 	@Override
 	public void updateBrandById(Brand brand) {
+		// 修改redis
+		jedis.hset("brand",String.valueOf(brand.getId()),brand.getName());
 		brandDao.updateBrandById(brand);
 	}
 

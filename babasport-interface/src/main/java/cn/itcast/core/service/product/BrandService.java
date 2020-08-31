@@ -13,6 +13,9 @@ public interface BrandService {
     // 查询结果集
     List<Brand> selectBrandListByQuery(Integer isDisplay);
 
+    // 从redis中查询结果集
+    List<Brand> selectBrandListByRedis();
+
     //通过ID查询品牌
     public Brand selectBrandById(Long id);
 
