@@ -126,8 +126,6 @@ public class ProductServiceImpl implements ProductService {
     @Autowired
     private JmsTemplate jmsTemplate;
 
-    @Autowired
-    private SolrServer solrServer;
     //上架（使用了solr）
     public void isShow(Long[] ids){
         Product product = new Product();
