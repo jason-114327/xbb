@@ -20,7 +20,7 @@
 		http://code.alibabatech.com/schema/dubbo        
 		http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
 		
-		<!-- 数据源，事务，扫描，mybatis，activeMQ，redis，solr... -->
+		<!-- 数据源  、事务 、扫描、MYbatis、ActiveMQ、Freemarker、Redis、Solr。。。。。 -->		
 		<import resource="config/*.xml"/>
 		
 </beans>
