@@ -1,6 +1,7 @@
 package cn.itcast.core.bean.product;
 
 import java.io.Serializable;
+import java.util.Objects;
 
 public class Color implements Serializable {
     /**
@@ -70,5 +71,21 @@ public class Color implements Serializable {
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");
         return sb.toString();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Color color = (Color) o;
+        return Objects.equals(id, color.id) &&
+                Objects.equals(name, color.name) &&
+                Objects.equals(parentId, color.parentId) &&
+                Objects.equals(imgUrl, color.imgUrl);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name, parentId, imgUrl);
     }
 }
