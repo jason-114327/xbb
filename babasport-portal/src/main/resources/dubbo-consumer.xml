@@ -47,6 +47,10 @@
 	<dubbo:reference interface="cn.itcast.core.service.SearchService" id="searchService"
 					 url="dubbo://127.0.0.1:20881"
 	/>
+	<!-- 服务换了  service-cms  -->
+	<dubbo:reference interface="cn.itcast.core.service.CmsService" id="cmsService"
+					 url="dubbo://127.0.0.1:20882"
+	/>
 	<!-- 全局设置 -->
 	<dubbo:consumer timeout="600000" check="false"/>
 
