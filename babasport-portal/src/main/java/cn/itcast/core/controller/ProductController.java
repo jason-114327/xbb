@@ -69,6 +69,7 @@ public class ProductController {
 
     @Autowired
     private CmsService cmsService;
+    
     //去商品详情页面
     @RequestMapping(value = "/product/detail")
     public String detail(Long id,Model model){
