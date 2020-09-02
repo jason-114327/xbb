@@ -61,6 +61,8 @@
 		<property name="destinationName" value="productId"/>
 		<!-- 监听到消息 之后  有个类处理此消息   处理回调消息的类 -->
 		<property name="messageListener" ref="customMessageListener"/>
+		<!-- 默认点对点模式   false  /  true订阅模式     publish  sub-->
+		<property name="pubSubDomain" value="true"/>
 	</bean>
 	
 	

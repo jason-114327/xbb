@@ -1,11 +1,11 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mvc="http://www.springframework.org/schema/mvc"
-	xmlns:context="http://www.springframework.org/schema/context"
-	xmlns:aop="http://www.springframework.org/schema/aop" 
-	xmlns:tx="http://www.springframework.org/schema/tx"
-	xmlns:task="http://www.springframework.org/schema/task"
-	xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mvc="http://www.springframework.org/schema/mvc"
+	   xmlns:context="http://www.springframework.org/schema/context"
+	   xmlns:aop="http://www.springframework.org/schema/aop"
+	   xmlns:tx="http://www.springframework.org/schema/tx"
+	   xmlns:task="http://www.springframework.org/schema/task"
+	   xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans
 		http://www.springframework.org/schema/beans/spring-beans-4.0.xsd 
 		http://www.springframework.org/schema/mvc 
 		http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd 
@@ -19,7 +19,7 @@
    		http://www.springframework.org/schema/task/spring-task-4.0.xsd
 		http://code.alibabatech.com/schema/dubbo        
 		http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
-		
+
 	<!-- AcitveMQ 配置-->
 	<!-- 工厂  原厂商提供 -->
 	<bean id="activeMQConnectionFactory" class="org.apache.activemq.ActiveMQConnectionFactory">
@@ -36,18 +36,20 @@
 		<!-- 最大 连接数 -->
 		<property name="maxConnections" value="2"/>
 	</bean>
-	
+
 	<!-- Spring管理起上面的工厂 -->
 	<bean id="connectionFactory" class="org.springframework.jms.connection.SingleConnectionFactory">
 		<!-- 注入上面的工厂连接池 -->
 		<property name="targetConnectionFactory" ref="pooledConnectionFactoryBean"/>
 	</bean>
-	
+
 	<!-- JmsTemplate由Spring提供   -->
 	<bean id="jmsTemplate" class="org.springframework.jms.core.JmsTemplate">
 		<property name="connectionFactory" ref="connectionFactory"/>
 		<!-- 默认目标 -->
 		<property name="defaultDestinationName" value="productId"/>
+		<!-- 默认点对点模式   false  /  true订阅模式     publish  sub-->
+		<property name="pubSubDomain" value="true"/>
 	</bean>
 
 </beans>

@@ -49,5 +49,27 @@
 		<!-- 默认目标 -->
 		<property name="defaultDestinationName" value="productId"/>
 	</bean>
-
+	
+	<!-- 处理消息的类 -->
+	<bean id="customMessageListener" class="cn.itcast.core.message.CustomMessageListener"/>
+	
+	<!-- Spring监听器  监听ActiveMQ中是否有消息 -->
+	<bean class="org.springframework.jms.listener.DefaultMessageListenerContainer">
+		<!-- 连接上ActiveMQ -->
+		<property name="connectionFactory" ref="connectionFactory"/>
+		<!-- 监听的目标 -->
+		<property name="destinationName" value="productId"/>
+		<!-- 监听到消息 之后  有个类处理此消息   处理回调消息的类 -->
+		<property name="messageListener" ref="customMessageListener"/>
+		<!-- 默认点对点模式   false  /  true订阅模式     publish  sub-->
+		<property name="pubSubDomain" value="true"/>
+	</bean>
+	
+	
+	
+	
+	
+	
+	
+		
 </beans>

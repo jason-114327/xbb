@@ -22,7 +22,7 @@ public class CustomMessageListener implements MessageListener{
 		// TODO Auto-generated method stub
 		ActiveMQTextMessage am = (ActiveMQTextMessage)message;
 		try {
-			System.out.println("ActiveMq中的消息是:" + am.getText());
+			System.out.println("ActiveMq中的消息是-solr:" + am.getText());
 			//保存商品信息到Solr服务器
 			searchService.insertProductToSolr(Long.parseLong(am.getText()));
 		} catch (JMSException e) {
