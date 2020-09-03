@@ -4,7 +4,7 @@
 	   xmlns:aop="http://www.springframework.org/schema/aop"
 	   xmlns:tx="http://www.springframework.org/schema/tx"
 	   xmlns:task="http://www.springframework.org/schema/task"
-	   xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+	   xmlns:dubbo="http://code.alibabatech.com/schema/dubbo" xmlns:doubbo="http://code.alibabatech.com/schema/dubbo"
 	   xsi:schemaLocation="http://www.springframework.org/schema/beans
 		http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
 		http://www.springframework.org/schema/mvc
@@ -28,9 +28,12 @@
 	<!-- 	<dubbo:registry address="192.168.200.128:2181" protocol="zookeeper"/> -->
 	<dubbo:registry address="N/A" check="false"/>
 	<!-- 4： 调用此接口对应的实现类  单位毫秒-->
-	<!--<dubbo:reference interface="cn.itcast.core.service.TestTbService" id="testTbService"
-					 url="dubbo://127.0.0.1:20880"
-	/>-->
+	<dubbo:reference interface="cn.itcast.core.service.user.BuyerService" id="buyerService"
+					 url="dubbo://127.0.0.1:20883"
+	/>
+	<doubbo:reference interface="cn.itcast.core.service.user.SessionProvider" id="essionProvider"
+					  url="dubbo://127.0.0.1:20883"
+	/>
 	<!-- 全局设置 -->
 	<dubbo:consumer timeout="600000" check="false"/>
 
