@@ -41,7 +41,7 @@ function fqPrice(id){
 
 //登陆
 function login(){
-	window.location.href = "http://localhost:8087/shopping/login.aspx?returnUrl=" + encodeURIComponent(window.location.href);
+	window.location.href = "http://localhost:8087/login.aspx?returnUrl=" + encodeURIComponent(window.location.href);
 }
 </script>
 </head>
