@@ -2,12 +2,12 @@ package cn.itcast.core.service.user;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 import cn.itcast.core.bean.user.Buyer;
 import cn.itcast.core.bean.user.BuyerQuery;
 import cn.itcast.core.dao.user.BuyerDao;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 /**
  * 用户管理

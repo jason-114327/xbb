@@ -20,10 +20,7 @@
 		http://code.alibabatech.com/schema/dubbo        
 		http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
 		
-	<!-- 扫描 -->
-	<context:component-scan base-package="cn.itcast"/>
-	
-	
-	
+		<!-- 扫描 -->
+		<context:component-scan base-package="cn.itcast"></context:component-scan>
 		
 </beans>

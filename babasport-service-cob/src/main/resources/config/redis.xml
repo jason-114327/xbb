@@ -19,12 +19,11 @@
    		http://www.springframework.org/schema/task/spring-task-4.0.xsd
 		http://code.alibabatech.com/schema/dubbo        
 		http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
-		
-	<!-- Redis  配置 -->
+
+	<!--redis 配置-->
 	<bean id="jedis" class="redis.clients.jedis.Jedis">
-		<constructor-arg value="192.168.200.128" index="0" type="java.lang.String"/>
-		<constructor-arg value="6379" index="1"/>
+		<constructor-arg value="192.168.200.128" index="0" type="java.lang.String"></constructor-arg>
+		<constructor-arg value="6379" index="1"></constructor-arg>
 	</bean>
-	
-		
+
 </beans>
