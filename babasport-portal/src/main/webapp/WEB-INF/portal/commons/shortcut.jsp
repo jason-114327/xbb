@@ -2,7 +2,7 @@
 <script type="text/javascript" src="/js/jquery-1.6.4.js"></script>
 <script type="text/javascript">
 	function login(){
-		window.location.href="http://localhost:8083/login.aspx?returnUrl="+window.location.href;
+		window.location.href="http://localhost:8083/login.aspx?returnUrl="+encodeURIComponent(window.location.href);
 	}
 </script>
 <div id="shortcut-2013">
