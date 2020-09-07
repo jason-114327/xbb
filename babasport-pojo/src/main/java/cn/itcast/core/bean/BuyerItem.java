@@ -1,6 +1,7 @@
 package cn.itcast.core.bean;
 
 import java.io.Serializable;
+import java.util.Objects;
 
 import cn.itcast.core.bean.product.Sku;
 
@@ -54,6 +55,27 @@ public class BuyerItem implements Serializable{
 	public String toString() {
 		return "BuyerItem [sku=" + sku + ", isHave=" + isHave + ", amount=" + amount + "]";
 	}
-	
-	
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)  // 比较地址
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass()) //class  cn.itcast.core.bean.BuyerItem
+			return false;
+		BuyerItem other = (BuyerItem) obj;
+		if (sku == null) {
+			if (other.sku != null)
+				return false;
+		} else if (!sku.getId().equals(other.sku.getId()))
+			return false;
+		return true;
+	}
+
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(sku, isHave, amount);
+	}
 }
