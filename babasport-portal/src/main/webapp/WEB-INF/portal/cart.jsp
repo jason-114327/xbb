@@ -124,15 +124,15 @@
 					<div class="cart-toolbar clearfix">
 						<div class="total fr">
 							<p>
-								<span class="totalSkuPrice">¥</span>商品金额：
+								<span class="totalSkuPrice">¥${buyerCart.productPrice}</span>商品金额：
 							</p>
 							<p>
-								<span id="totalRePrice">- ¥</span>运费：
+								<span id="totalRePrice">- ¥${buyerCart.fee}</span>运费：
 							</p>				</div>
 
 					</div>
 					<div class="amout fr">
-						<span id="selectedCount">$</span> 件商品
+						<span id="selectedCount">${buyerCart.productAmount}</span> 件商品
 					</div>
 					<div class="ui-ceilinglamp-1" style="width: 988px; height: 49px;">
 						<div class="cart-dibu ui-ceilinglamp-current"
@@ -152,7 +152,7 @@
 								</span>
 								</div>
 								<div class="total fr">
-									总计： <span class="totalSkuPrice">¥</span>
+									总计： <span class="totalSkuPrice">¥${buyerCart.totalPrice}</span>
 								</div>
 							</div>
 						</div>
