@@ -163,6 +163,38 @@ public class CartController {
 		model.addAttribute("buyerCart", buyerCart);
 //		跳转到购物车页面
 		return "cart";
+	}
 
+	//结算
+	@RequestMapping(value = "/buyer/trueBuy")
+	public String trueBuy(Long[] skuIds,Model model,HttpServletRequest request,HttpServletResponse response){
+//		1）	购物车中必须有商品
+		String username = sessionProvider.getAttributeForUsername(RequestUtils.getCSESSIONID(request, response));
+		BuyerCart buyerCart = skuService.selectBuyerCartFromRedis(username);
+		List<BuyerItem> items = buyerCart.getItems();
+		//标记
+		Boolean flag = false;
+		if(items.size()>0){
+//			把购物车装满
+			for (BuyerItem buyerItem : items) {
+				buyerItem.setSku(skuService.selectSkuById(buyerItem.getSku().getId()));
+//		2）	购物车中必须有库存
+				if(buyerItem.getAmount() > buyerItem.getSku().getStock()){
+					//无货
+					buyerItem.setIsHave(false);
+					flag = true;
+				}
+			}
+			//至少一款无货
+			if(flag){
+				//视图 有一个无货不能进入下个订单页面
+				model.addAttribute("buyerCart", buyerCart);
+				return "cart";
+			}
+		}else{
+			return "redirect:/toCart";
+		}
+		//视图  如果都有货进入下个订单页面
+		return "order";
 	}
 }

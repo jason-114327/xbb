@@ -33,6 +33,17 @@
 		<property name="prefix" value="/WEB-INF/portal/"></property>
 		<property name="suffix" value=".jsp"></property>
 	</bean>
+
+	<!-- Springmvc拦截器 -->
+	<mvc:interceptors>
+		<!-- 多个拦截器 -->
+		<mvc:interceptor>
+			<!-- 拦截器的规则   /buyer/** -->
+			<mvc:mapping path="/buyer/**"/>
+			<!-- 拦截到自定义的类中处理 -->
+			<bean class="cn.itcast.core.interceptor.CustomInterceptor"></bean>
+		</mvc:interceptor>
+	</mvc:interceptors>
 	
 	<!-- 图片上传 -->
 	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver"/>
