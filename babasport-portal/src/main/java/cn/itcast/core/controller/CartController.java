@@ -7,6 +7,8 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import cn.itcast.core.bean.order.Order;
+import cn.itcast.core.service.user.BuyerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -156,7 +158,6 @@ public class CartController {
 			for (BuyerItem buyerItem : items) {
 				buyerItem.setSku(skuService.selectSkuById(buyerItem.getSku().getId()));
 			}
-
 		}
 //		3：没有
 //		回显购物车内容
@@ -196,5 +197,16 @@ public class CartController {
 		}
 		//视图  如果都有货进入下个订单页面
 		return "order";
+	}
+
+	@Autowired
+	private BuyerService buyerService;
+	//提交订单
+	@RequestMapping(value = "/buyer/submitOrder")
+	public String submitOrder(Order order, Model model, HttpServletRequest request, HttpServletResponse response){
+		String username = sessionProvider.getAttributeForUsername(RequestUtils.getCSESSIONID(request, response));
+		//用户
+		buyerService.insertOrder(order, username);
+		return "success";
 	}
 }

@@ -55,6 +55,10 @@
 	<dubbo:reference interface="cn.itcast.core.service.user.SessionProvider" id="sessionProvider"
 					 url="dubbo://127.0.0.1:20883"
 	/>
+	<!-- 服务换了  service-cob  -->
+	<dubbo:reference interface="cn.itcast.core.service.user.BuyerService" id="buyerService"
+					 url="dubbo://127.0.0.1:20883"
+	/>
 	<!-- 全局设置 -->
 	<dubbo:consumer timeout="600000" check="false"/>
 
