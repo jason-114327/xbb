@@ -73,11 +73,20 @@ public class SkuServiceImpl implements SkuService {
 	public void insertBuyerCartToRedis(BuyerCart buyerCart, String username) {
 		//判断购物项的长度大于0
 		List<BuyerItem> items = buyerCart.getItems();
-		if (items.size() > 0) {
+		if(items.size()>0){
 			for (BuyerItem buyerItem : items) {
-				jedis.hset("buyerCart:" + username,
-						String.valueOf(buyerItem.getSku().getId())
-						, String.valueOf(buyerItem.getAmount()));
+				//判断是否已经存在了
+				if(jedis.hexists("buyerCart:" + username,
+						String.valueOf(buyerItem.getSku().getId()))){
+					//加数量
+					jedis.hincrBy("buyerCart:" + username,
+							String.valueOf(buyerItem.getSku().getId())
+							, buyerItem.getAmount());
+				}else{
+					jedis.hset("buyerCart:" + username,
+							String.valueOf(buyerItem.getSku().getId())
+							,String.valueOf(buyerItem.getAmount()));
+				}
 			}
 		}
 	}
