@@ -29,35 +29,35 @@
 	<dubbo:registry address="N/A" check="false"/>
 	<!-- 4： 调用此接口对应的实现类  单位毫秒-->
 	<dubbo:reference interface="cn.itcast.core.service.TestTbService" id="testTbService"
-					 url="dubbo://127.0.0.1:20880"
+					 url="dubbo://8.129.42.244:20880"
 	/>
 	<dubbo:reference interface="cn.itcast.core.service.product.BrandService" id="brandService"
-					 url="dubbo://127.0.0.1:20880"
+					 url="dubbo://8.129.42.244:20880"
 	/>
 	<dubbo:reference interface="cn.itcast.core.service.upload.UploadService" id="uploadService"
-					 url="dubbo://127.0.0.1:20880"
+					 url="dubbo://8.129.42.244:20880"
 	/>
 	<dubbo:reference interface="cn.itcast.core.service.product.ProductService" id="productService"
-					 url="dubbo://127.0.0.1:20880"
+					 url="dubbo://8.129.42.244:20880"
 	/>
 	<dubbo:reference interface="cn.itcast.core.service.product.SkuService" id="skuService"
-					 url="dubbo://127.0.0.1:20880"
+					 url="dubbo://8.129.42.244:20880"
 	/>
 	<!-- 服务换了  service-solr  -->
 	<dubbo:reference interface="cn.itcast.core.service.SearchService" id="searchService"
-					 url="dubbo://127.0.0.1:20881"
+					 url="dubbo://8.129.42.244:20881"
 	/>
 	<!-- 服务换了  service-cms  -->
 	<dubbo:reference interface="cn.itcast.core.service.CmsService" id="cmsService"
-					 url="dubbo://127.0.0.1:20882"
+					 url="dubbo://8.129.42.244:20882"
 	/>
 	<!-- 服务换了  service-cob  -->
 	<dubbo:reference interface="cn.itcast.core.service.user.SessionProvider" id="sessionProvider"
-					 url="dubbo://127.0.0.1:20883"
+					 url="dubbo://8.129.42.244:20883"
 	/>
 	<!-- 服务换了  service-cob  -->
 	<dubbo:reference interface="cn.itcast.core.service.user.BuyerService" id="buyerService"
-					 url="dubbo://127.0.0.1:20883"
+					 url="dubbo://8.129.42.244:20883"
 	/>
 	<!-- 全局设置 -->
 	<dubbo:consumer timeout="600000" check="false"/>

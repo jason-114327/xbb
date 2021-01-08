@@ -22,7 +22,7 @@
 
 	<!--solr 配置-->
 	<bean id="solrServer" class="org.apache.solr.client.solrj.impl.HttpSolrServer">
-		<constructor-arg value="http://192.168.200.128:8080/solr/"></constructor-arg>
+		<constructor-arg value="8.129.42.244:8080/solr/"></constructor-arg>
 	</bean>
 
 </beans>

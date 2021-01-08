@@ -17,6 +17,7 @@ public class TestRedis {
     // 从spring容器获取
     @Test
     public void testSpringJedis(){
+        jedis.auth("redis");
         jedis.set("ooo","aaa");
         jedis.close();
     }
@@ -24,9 +25,10 @@ public class TestRedis {
     // 直接连接
     @Test
     public void testRedis(){
-        Jedis jedis = new Jedis("192.168.200.128",6379);
+        Jedis jedis = new Jedis("8.129.42.244",6379);
+        jedis.auth("redis");
 //        Long pno = jedis.incr("pno");
-        String pno = jedis.get("pno");
+        String pno = jedis.get("ooo");
         System.out.println(pno);
         jedis.close();
     }

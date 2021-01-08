@@ -15,6 +15,9 @@ import cn.itcast.core.service.TestTbService;
 @RequestMapping(value = "/control")
 @Controller
 public class CenterController {
+
+	@Autowired
+	private TestTbService testTbService;
 	
 	// 首页
 	@RequestMapping(value="/index.do")
@@ -82,18 +85,18 @@ public class CenterController {
 	 * void：异步时ajax
 	 * String：跳转页面 + 视图
 	 */
-	/*@RequestMapping(value="/test/index.do")
-	public String index(Model model) {
+	@RequestMapping(value="/test/doubbo.do")
+	public String doubbo(Model model) {
 		
 		Map<String, String> map = new HashMap<String, String>();
 		map.put("name", "世界你好");
 		model.addAllAttributes(map);
 		
 		TestTb testTb = new TestTb();
-		testTb.setName("张三");
+		testTb.setName("张三111");
 		testTb.setBirthday(new Date());
 		testTbService.insertTestTb(testTb);
 		
 		return "index";
-	}*/
+	}
 }
